@@ -41,8 +41,8 @@ void pushFront(node **head, int x) {
 void pushBack(node **head, int x ) {
     node *temp = *head;
     node *newNode = makeNode(x);
-    if(temp == NULL) {
-        temp = newNode;
+    if(*head == NULL) {
+        *head = newNode;
         return;
     }
     while (temp->next != NULL)
@@ -56,11 +56,11 @@ int main() {
     node *head = NULL;
 
     for (int i = 0; i <= 5; i++) {
-        pushFront(&head, i);
+        pushBack(&head, i);
     };
 
-    pushBack(&head, 19);
 
+    pushBack(&head, 19);
     pushFront(&head, 99);
 
     duyet(head);
