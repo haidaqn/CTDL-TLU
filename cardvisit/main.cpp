@@ -52,7 +52,7 @@ void inCard(string name,string cv, string sdt, string email, string dc){
     fout << "<body>" << endl;
     fout << "<div class='main'>" << endl;
     fout << "<div class='container'>" << endl;
-    fout << "<img class='img-item' src='https://img6.thuthuatphanmem.vn/uploads/2022/03/15/mau-background-card-visit_092710120.jpg'/>"<< endl;
+    fout << "<img class='img-item' src='./bg.jpg/>"<< endl;
     fout << "<h1 class='item-1 name'>";
     fout<< name;
     fout << "</h1>" << endl;

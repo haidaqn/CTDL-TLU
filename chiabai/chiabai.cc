@@ -14,7 +14,7 @@ int main()
         rd1 = rand() % 13;
         rd2 = rand() % 4;
 
-        string s2(1, b[rd2]);
+        char s2 = b[rd2];
         string s = a[rd1] + s2;
 
         if (mp[s] < 1)
