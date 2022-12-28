@@ -55,7 +55,6 @@ class List {
             N++;
         }
 
-
         void PrintAll () const {
             for(int i = 0 ; i < N; i++) {
                 cout<<a[i] << " ";
@@ -78,7 +77,7 @@ class List {
             return "false";
         }
 
-        int CountByValue(int value) {
+        int CountByValue(int value) const {
             int dem = 0;
             for(int i = 0; i < N ; i++) {
                 if(a[i] == value) 
@@ -87,6 +86,9 @@ class List {
 
             return dem;
         }
+
+        
+
 
 };
 
