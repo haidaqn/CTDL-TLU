@@ -44,7 +44,7 @@ class List {
             for(int i = from; i <= to ; i++) {
                 cout<<a[i]<<" ";
             }
-
+            cout << endl;
         }
 
         void Insert (int pos, T value) {
@@ -59,6 +59,7 @@ class List {
             for(int i = 0 ; i < N; i++) {
                 cout<<a[i] << " ";
             }
+            cout << endl;
         }
 
         void Reverse() {
@@ -87,7 +88,22 @@ class List {
             return dem;
         }
 
-        
+        bool checkArray(List<T> a, T x)
+        {
+            for (int i = 0; i < a.Count();i++)
+                if(x == a[i])
+                    return true;
+            return false;
+        }
+
+        // gán
+        List operator = (List a) {
+            List<T> assign;
+            for (int i = 0; i < N; i++) {
+                assign.Add(a[i]);
+            }
+            return assign;
+        }
 
 
 };

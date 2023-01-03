@@ -1,34 +1,25 @@
 #include <bits/stdc++.h>
 #include "list.h"
-
 using namespace std;
 
 int main(){
 
-    List<int> ds;
-    for(int i = 1; i < 6 ; i++) {
+    List<int> ds, ds1;
+    for(int i = 1; i < 9 ; i++) {
         ds.Add(i);
     }
-    ds.Add(3);
-    ds.Add(3);
-    ds.Add(3);
-    ds.Add(3);
-    ds.Add(3);
-    // ds.Insert(0,100);
+    for (int i = 2; i <= 10; i+=2){
+        ds1.Add(i);
+    }
 
-    cout<<ds.Find(3)<<endl;
+    ds.PrintAll();
+    ds1.PrintAll();
 
-    // ds.Reverse();
 
-    cout<<ds.CountByValue(3);
+    List<int> chua = ds - ds1;
 
-    // ds.PrintAll();
 
-    cout<<endl;
-
-    
-
-    // ds.PrintFromTo(3,6);
+    chua.PrintAll();
 
 
     return 0;    
