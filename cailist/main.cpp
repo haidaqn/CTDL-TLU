@@ -16,7 +16,7 @@ int main(){
     ds1.PrintAll();
 
 
-    List<int> chua = ds - ds1;
+    List<int> chua =  ds1;
 
 
     chua.PrintAll();
