@@ -119,7 +119,16 @@ class List {
                 p->next = p->next->next;
             }
         }
-        
+
+        void Update(T value, int pos)
+        {
+            Node<T> *p = head;
+            for (int i = 1; i < pos; i++)
+            {
+                p = p->next;
+            }
+            p->data = value;
+        }
 };
 
 #endif
