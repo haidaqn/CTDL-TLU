@@ -98,8 +98,7 @@ class List {
             if( pos < 1 || pos > n + 1)
                 return;
             if( pos == 1 ) {
-                newNode->next = head;
-                head = newNode;
+                pushFront(value);
                 return;
             }
             Node<T> *tmp = head;
