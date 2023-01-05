@@ -12,7 +12,9 @@ int main() {
     l.Add(5);
     l.Add(9);
 
-    l.printAll();    
+    l.Delete(2);
+
+    l.printAll();
 
     return 0;
 }
