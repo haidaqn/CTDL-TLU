@@ -120,7 +120,7 @@ class List {
             }
         }
 
-        void Update(T value, int pos)
+        void Update( int pos, T value)
         {
             Node<T> *p = head;
             for (int i = 1; i < pos; i++)
