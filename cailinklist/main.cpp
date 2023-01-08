@@ -3,6 +3,10 @@
 
 using namespace std;
 
+
+// new là cấp phát vùng nhớ cho 1 con trỏ
+// delete là giải phóng vùng nhớ được cấp phát trước đó của con trỏ đó 
+
 int main() { 
 
     List<int> l;
@@ -12,7 +16,7 @@ int main() {
     l.Add(5);
     l.Add(9);
 
-    l.Delete(2);
+    l.Update(2, 19);
 
     l.printAll();
 

@@ -76,7 +76,6 @@ class List {
             return dem;
         }
 
-
         string find(T x) const {
 
             Node<T> *tmp = head;
