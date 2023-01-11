@@ -106,9 +106,9 @@ class List {
         }
 
 
-       /*  void getTail () {
+        void getTail () {
             cout<<tail->data<<endl;
-        } */
+        }
 
         /* void getNodeAtIndex(int pos, Node<T> **tail) {
             if( pos < 0 || pos >= count() + 1) {
@@ -140,18 +140,22 @@ class List {
 
         void Delete(int pos) {
             if (pos == 0){
+                Node<T> *p = head;
                 head = head->next;
+                delete p;
             if (head == 0)
                 tail = 0;
 		    }
             else
             {
                 Node<T> *p = head;
-                for(int i = 0; i < pos -1; i++)
+                for(int i = 0; i < pos-1; i++)
                     p=p->next;
+                Node<T> *q = p->next;			
                 p->next = p->next->next;
+                delete q;
                 if (p->next == 0)
-                    tail = p;
+                    tail = 0;
             }		
 	    };
 
