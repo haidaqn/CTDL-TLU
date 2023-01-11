@@ -105,7 +105,12 @@ class List {
             tmp->next = newNode;
         }
 
-        void getNodeAtIndex(int pos, Node<T> **tail) {
+
+       /*  void getTail () {
+            cout<<tail->data<<endl;
+        } */
+
+        /* void getNodeAtIndex(int pos, Node<T> **tail) {
             if( pos < 0 || pos >= count() + 1) {
                 return ;
             }
@@ -116,34 +121,39 @@ class List {
                 tmp->next = NULL;
                 *tail = tmp;
             }
-        }
+        } */
 
-        void Delete(int pos) {
+        /* void Delete(int pos) {
             if (pos == 0)
                 head = head->next;
-            else if (pos = count() - 1) {
+            if(pos > 0 && pos < count())
+            {
+                Node<T> *p = head;
+                for (int i = 1; i <= pos - 1; i++)
+                    p = p->next;
+                p->next = p->next->next;
+            }
+            if (pos = count() - 1) {
                 getNodeAtIndex(pos - 2,  &tail);
             }
-            else
-            {
-                Node<T> *p = head;
-                for (int i = 1; i <= pos - 1; i++)
-                    p = p->next;
-                p->next = p->next->next;
-            }
-        }
-
-       /*  void Delete(int pos) {
-            if (pos == 0)
-                head = head->next;
-            else
-            {
-                Node<T> *p = head;
-                for (int i = 1; i <= pos - 1; i++)
-                    p = p->next;
-                p->next = p->next->next;
-            }
         } */
+
+        void Delete(int pos) {
+            if (pos == 0){
+                head = head->next;
+            if (head == 0)
+                tail = 0;
+		    }
+            else
+            {
+                Node<T> *p = head;
+                for(int i = 0; i < pos -1; i++)
+                    p=p->next;
+                p->next = p->next->next;
+                if (p->next == 0)
+                    tail = p;
+            }		
+	    };
 
         void Update( int pos, T value)
         {
