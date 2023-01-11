@@ -8,9 +8,11 @@ template<class T>
 class List {
     private :
         Node<T> *head;
+        Node<T> *tail;
     public:
         List () {
             head = 0;
+            tail = 0;
         }
 
         void Add(T x) {
@@ -19,12 +21,11 @@ class List {
             tmp->next = NULL;
             if(head == NULL) {
                 head = tmp;
+                tail = tmp;
             }
             else {
-                Node<T> *p = head;
-                while ( p->next != NULL)
-                    p = p->next;
-                p->next = tmp;                
+               tail->next = tmp;               
+               tail = tmp;
             }
         }
 
@@ -77,11 +78,8 @@ class List {
         }
 
         string find(T x) const {
-
             Node<T> *tmp = head;
-
             while( tmp != NULL) {
-
                 if(tmp->data == x)
                     return "Yes";
                 tmp = tmp->next;
@@ -107,7 +105,35 @@ class List {
             tmp->next = newNode;
         }
 
+        void getNodeAtIndex(int pos, Node<T> **tail) {
+            if( pos < 0 || pos >= count() + 1) {
+                return ;
+            }
+            if (pos > 0 && pos <= count() ) {
+                Node<T> * tmp = head;
+                for(int i = 0; i <= pos ; i++) 
+                    tmp = tmp->next;
+                tmp->next = NULL;
+                *tail = tmp;
+            }
+        }
+
         void Delete(int pos) {
+            if (pos == 0)
+                head = head->next;
+            else if (pos = count() - 1) {
+                getNodeAtIndex(pos - 2,  &tail);
+            }
+            else
+            {
+                Node<T> *p = head;
+                for (int i = 1; i <= pos - 1; i++)
+                    p = p->next;
+                p->next = p->next->next;
+            }
+        }
+
+       /*  void Delete(int pos) {
             if (pos == 0)
                 head = head->next;
             else
@@ -117,7 +143,7 @@ class List {
                     p = p->next;
                 p->next = p->next->next;
             }
-        }
+        } */
 
         void Update( int pos, T value)
         {

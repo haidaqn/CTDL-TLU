@@ -11,12 +11,11 @@ int main() {
 
     List<int> l;
 
-    l.Add(3);
-    l.Add(1);
-    l.Add(5);
-    l.Add(9);
+    for(long long i = 1; i <= 10; i++) {
+        l.Add(i);
+    }
 
-    l.Update(2, 19);
+    l.Delete(l.count()-1);
 
     l.printAll();
 
