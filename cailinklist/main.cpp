@@ -15,20 +15,11 @@ int main() {
         l.Add(i);
     }
 
-    int sizeList = l.count();
-
-    // l.Delete(sizeList);
-
-    // l.Delete(9);
-
-    // l.Delete(sizeList - 1);
-
     
     l.printAll();
 
     cout<<endl;
 
-    // l.getTail();
 
     return 0;
 }

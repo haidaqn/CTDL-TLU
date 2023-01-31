@@ -39,10 +39,9 @@ class List {
             for (int i = 0; i < index ;++i ){
                 p = p->next;
             }
-            cout << p->data;
+            return p->data;
         }
         void Update (T value, int index) {
-
             Node<T> *tmp = head;
             for (int i = 0; i < index;i++) 
                 tmp = tmp ->next;
