@@ -16,6 +16,7 @@
         "array": "cpp",
         "string_view": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "variant": "cpp"
     }
 }
