@@ -18,6 +18,10 @@
         "ranges": "cpp",
         "span": "cpp",
         "variant": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
     }
 }
