@@ -16,7 +16,7 @@ int main() {
     }
 
     
-    l.printAll();
+    cout<<l.count();
 
     cout<<endl;
 

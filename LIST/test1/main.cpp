@@ -13,9 +13,8 @@ int main()
     {
         l.Add(i);
     }
-    l.PrintAll();
-    l.Insert(3, 12);
-    cout << endl;
+    l.Add(0);
+
     l.PrintAll();
 
     return 0;

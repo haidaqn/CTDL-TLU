@@ -30,8 +30,8 @@ class Stack {
             if(IsEmpty() == 1) {
                 return 0;
             }
-            T value = top->data;
             Node<T> *p = top;
+            T value = p->data;
             top = top ->next;
             delete p;
             return value;

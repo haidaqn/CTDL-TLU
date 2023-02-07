@@ -20,12 +20,21 @@ class List {
             tmp->next = NULL;
             if(head == NULL ) {
                 head = tmp;
+                return;
             }
             else {
-                Node<T> * p = head;
-                while (p->next != NULL)
+                Node<T> *p = head, *n = new Node<T>;
+                while(p && p->data < value) {
+                    n = p;
                     p = p->next;
-                p->next = tmp;  
+                }
+                if(!p) {
+                    n->next = tmp;
+                }
+                else {
+                    tmp->next = p;
+                    n->next = tmp;
+                }
             }
         }
         void PrintAll() const {
@@ -71,6 +80,18 @@ class List {
                 tmp->next = p->next;
                 p->next = tmp;
             }
+        }
+        int count() const
+        {
+            int dem = 0;
+            Node<T> *p = head;
+            while (p != NULL)
+            {
+                dem++;
+                p = p->next;
+            }
+
+            return dem;
         }
 };
 
