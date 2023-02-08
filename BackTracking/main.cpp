@@ -40,9 +40,9 @@ int main() {
     int a[100];
     bool flag[100];
     fill_n(flag, 100, 1);
-    // Sinh(1, 3, a);
+    Sinh(1, 3, a);
     cout << endl;
-    HoanVi(1, 3, a, flag);
+    // HoanVi(1, 3, a, flag);
 
     return 0;
 }

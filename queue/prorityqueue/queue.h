@@ -36,7 +36,7 @@ public:
         tmp->data = value;
         tmp->priority = p;
         tmp->next = NULL;
-        if (f == NULL)
+        if (f == NULL && r == NULL)
         {
             f = tmp;
             r = tmp;
@@ -50,16 +50,15 @@ public:
         else {
             Node<T> *n = f;
             while(n->next->priority < p && n->next != NULL)
+            {
                 n = n->next;
-            if(n->next == NULL) {
+            }
+            if( n->next == NULL ) {
                 n->next = tmp;
                 return;
             }
-            else {
-                tmp->next = n->next;
-                n->next = tmp;
-                return;
-            }
+            tmp->next = n->next;
+            n->next =tmp;
         }
     }
     T DeQueue()
