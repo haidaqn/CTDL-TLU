@@ -158,3 +158,47 @@ int main() {
 
     return 0;
 } */
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void print(int n, int arr[]) {
+    for(int i =0;i < n;i++) 
+        cout<<arr[i]<<"   ";
+    cout<<endl;
+}
+
+void khoiTao(int n, int a[] ) {
+    for(int i =0;i < n;i++) 
+        a[i] = rand() % n;
+}
+
+void noibot(int n, int a[]) {
+    for(int i = 0;i<n-1;i++) {
+        for(int j = i+1;j<n;j++) {
+            if(a[j] < a[i]) {
+                int tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+        }
+    }
+}
+
+
+int main() {
+
+    srand(time(0));
+
+    int n = 100000;
+    int arr[100000];
+
+    khoiTao(n,arr);
+    print(n,arr);
+    cout<<"------------------------------------\n";
+    noibot(n,arr);
+    print(n,arr);
+
+    return 0;
+}

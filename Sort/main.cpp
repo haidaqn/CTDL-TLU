@@ -26,8 +26,8 @@ void NoiBot(int n, int arr[])
 }
 
 void InsertionSort(int n, int arr[]) {
-    int i, key, j;
-    for (i = 1; i < n; i++)
+    int key, j;
+    for (int i = 1; i < n; i++)
     {
         key = arr[i];
         j = i - 1;
@@ -94,6 +94,9 @@ int main()
 
     // SelectionSort(n, arr);
     // InsertionSort(n, arr);
+
+    MergeSort(arr,1,5);
+
     PrintAll(n, arr);
 
     return 0;
