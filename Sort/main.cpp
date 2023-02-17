@@ -121,9 +121,9 @@ int main()
     // SelectionSort(n, arr);
     // InsertionSort(n, arr);
 
-    // MergeSort(arr,1,5);
+    MergeSort(arr,1,5);
 
-    QuickSort(arr, 0, n);
+    // QuickSort(arr, 0, n);
 
     PrintAll(n, arr);
 

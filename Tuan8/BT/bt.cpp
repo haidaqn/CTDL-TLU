@@ -5,26 +5,26 @@
 using namespace std;
 
 // Kiem tra phan tu la toan tu, toan hang hay dau ngoac
-int KiemTraPhanTu(char Token)
+int KiemTraPhanTu(char x)
 {
-    if (Token == '+' || Token == '-' || Token == '*' || Token == '/' || Token == '^')
+    if (x == '+' || x == '-' || x == '*' || x == '/' || x == '^')
         return 1;
     else
     {
-        if (Token == '(' || Token == ')')
+        if (x == '(' || x == ')')
             return -1;
         else
             return 0;
     }
 }
 // Do uu tien toan tu
-int DoUuTien(char o)
+int DoUuTien(char x)
 {
-    if (o == '^')
+    if (x == '^')
         return 3;
-    if (o == '*' || o == '/')
+    if (x == '*' || x == '/')
         return 2;
-    // if (o == '+' || o == '-')
+    // if (x == '+' || x == '-')
     return 1;
 }
 float Tinh(char dau, float a, float b)
@@ -45,6 +45,8 @@ int main() {
 
 
     // Ký pháp ba lan ngược
+
+
     string bieuThuc;
     getline(cin, bieuThuc);
 
@@ -56,12 +58,14 @@ int main() {
     int i = 0;
     while (i < bieuThuc.length())
     {
-        // char Token = bieuThuc[i];
+        char Token = bieuThuc[i];
         // cout << "\nToken = "<<Token<<"\n";
+        // nếu token là toán hạng
         if (KiemTraPhanTu(Token) == 0)
             y.EnQueue(Token);
         else
-        {
+        {   
+            // nếu là toán tử
             if (KiemTraPhanTu(Token) == 1)
             {
                 while (!x.IsEmpty())
@@ -75,6 +79,7 @@ int main() {
                 }
                 x.Push(Token);
             }
+            // nếu là ( or )
             else
             {
                 if (Token == '(')
@@ -105,6 +110,7 @@ int main() {
 
     Stack<float> u;
 
+    //  fifo
     while(!y.IsEmpty()){
         char tmp = y.DeQueue();
         cout << "  " << tmp;
@@ -119,9 +125,8 @@ int main() {
         }
     }
 
-    printf("\n");
-    cout << "\nKet qua la: " << kq;
- 
+    cout << "\n\nKet qua la: " << kq << endl;
+
 
     return 0;
 }
