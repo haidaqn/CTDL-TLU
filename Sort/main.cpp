@@ -86,6 +86,32 @@ void MergeSort(int a[], int s, int f)
         Merge(a, s, f);
     }
 }
+void QuickSort(int a[], int left, int right)
+{
+    int i, j;
+    int x;
+    x = a[(left + right) / 2];
+    i = left;
+    j = right;
+    do
+    {
+        while (a[i] < x)
+            i++;
+        while (a[j] > x)
+            j--;
+        if (i <= j)
+        {
+            swap(a[i], a[j]);
+            i++;
+            j--;
+        }
+    } while (i < j);
+    
+    if (left < j)
+        QuickSort(a, left, j);
+    if (right > i)
+        QuickSort(a, i, right);
+}
 
 int main()
 {
@@ -95,7 +121,9 @@ int main()
     // SelectionSort(n, arr);
     // InsertionSort(n, arr);
 
-    MergeSort(arr,1,5);
+    // MergeSort(arr,1,5);
+
+    QuickSort(arr, 0, n);
 
     PrintAll(n, arr);
 

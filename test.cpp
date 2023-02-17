@@ -158,7 +158,7 @@ int main() {
 
     return 0;
 } */
-
+/* 
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -201,4 +201,23 @@ int main() {
     print(n,arr);
 
     return 0;
+} */
+/* 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+
+    char x = '9';
+
+
+    if (x - '0' >= 0 && x - '0' <= 9)
+    {
+        cout << "dung";
+    }
+
+    return 0;
 }
+ */
