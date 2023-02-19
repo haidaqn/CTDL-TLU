@@ -8,7 +8,7 @@ void print(int n, int a[]) {
     cout << endl;
 }
 
-void Sinh(int i,int n,git pull origin int a[]) {
+void Sinh(int i,int n, int a[]) {
     if(i > n ) {
         print(n, a);
     }

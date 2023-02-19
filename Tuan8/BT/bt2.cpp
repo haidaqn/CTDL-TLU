@@ -30,7 +30,6 @@ int KT(char x) {
     return 0;
 }
 
-
 int main() {
 
     string s;
