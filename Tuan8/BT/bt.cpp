@@ -37,19 +37,14 @@ float Tinh(char dau, float a, float b)
         return a * b;
     if (dau == '/')
         return a / b;
-    if (dau == '^')
-        ;
     return pow(a, b);
 }
 int main() {
-
-
     // Ký pháp ba lan ngược
-
 
     string bieuThuc;
     getline(cin, bieuThuc);
-
+    cout << endl;
     Stack<char> x;
     Queue<char> y;
 
@@ -59,7 +54,6 @@ int main() {
     while (i < bieuThuc.length())
     {
         char Token = bieuThuc[i];
-        // cout << "\nToken = "<<Token<<"\n";
         // nếu token là toán hạng
         if (KiemTraPhanTu(Token) == 0)
             y.EnQueue(Token);
@@ -104,12 +98,12 @@ int main() {
         }
         i++;
     }
-
+    
+    // hết chuỗi thì push stack sang queue
     while (!x.IsEmpty())
         y.EnQueue(x.Pop());
 
     Stack<float> u;
-
     //  fifo
     while(!y.IsEmpty()){
         char tmp = y.DeQueue();
