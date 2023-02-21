@@ -21,15 +21,12 @@ class List {
             }
             N = n;
         }
-
         void Add(T t){
             a[N++] = t;
         }
-
         T Get(int pos) const{
             return a[pos];
         }
-
         int Count() const{
             return N;
         }
