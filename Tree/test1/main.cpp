@@ -6,6 +6,7 @@ int main() {
 
     Tree<int> l;
     l.add(7);
+    l.add(10);
     l.add(9);
     l.add(3);
     l.add(5);
