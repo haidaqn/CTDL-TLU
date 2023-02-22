@@ -10,7 +10,8 @@ int main(){
     ds.Add(3);
     ds.Add(5);
     ds.Add(14);
-    ds.Print();
+    // ds.Print();
     cout << endl;
-    ds.chieucao();
+    ds.cr();
+    // ds.chieucao();
 }

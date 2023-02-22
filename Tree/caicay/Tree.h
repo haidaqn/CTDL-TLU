@@ -21,6 +21,37 @@ private:
             return r2;
         return 0;
     }
+    TreeNode<T> *GetParent(T val, TreeNode<T> *r)
+    {
+        if(r == 0 ) 
+            return 0;
+        if(r->key == val) {
+            return root = 0;
+        }
+        else {
+            while (r->pChild->key != val)
+            {
+                if(r->pChild->key == val) return r;
+                else {
+                    TreeNode<T> * tmp = r->pChild;
+                    while (tmp->pNext->key != val && tmp->pNext != 0)
+                    {
+                        tmp = tmp->pNext;
+                    }
+                    if(tmp->pNext->key == val) return tmp;
+                }
+                r = r->pChild;
+            }
+            
+        }
+    }
+    void PrintAll(TreeNode<T> *r){
+        if(r != 0) {
+            cout<<r->key<<"\n";
+            PrintAll(r->pChild);
+            PrintAll(r->pNext);
+        }
+    }
 
 public:
     Tree()
@@ -73,6 +104,35 @@ public:
             }
         }
         return r;
+    }
+    void printall() {
+        PrintAll(root);
+    }
+    void Delete(T valParent) {
+        if(root == 0 ) 
+            return;
+        if(root->key == valParent) {
+            root = 0;
+        }
+        else {
+            TreeNode<T> *tmp = root;
+            TreeNode<T> *p = GetParent(valParent,root);
+            if(p != 0 ) {
+                if(p->pChild->pNext != 0) {
+                    TreeNode<T> *q = p->pChild;
+                    p->pChild = q->pNext;
+                    delete q;
+                    return;
+                }
+                else {
+                    p->pChild = 0;
+                }
+            }            
+        }
+    }
+    void Get(T val) {
+        TreeNode<T> *tmp = GetParent(val, root);
+        cout<<tmp->key<<endl;
     }
 };
 

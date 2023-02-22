@@ -1,4 +1,6 @@
 #include"BSTNode.h"
+#include "queue.h"
+
 #include<iostream>
 
 using namespace std;
@@ -41,14 +43,18 @@ class BST{
         }
         int height(BSTNode<T> *r)
         {
-            if (r == nullptr || (r->pLeft == nullptr && r->pRight == nullptr))
-                return 0;
-            else
+            if(r!= 0)
             {
                 int leftHeight = height(r->pLeft);
                 int rightHeight = height(r->pRight);
                 return 1 + max(leftHeight, rightHeight);
             }
+            return 0;
+        }
+        void CR() {
+            Queue<BSTNode<T>*> q1;
+            q1.EnQueue(root);
+            cout<<q1.GetFirst();
         }
     public:
         BST(){
@@ -66,5 +72,9 @@ class BST{
         void chieucao() {
             cout << height(root) << endl;
         }
+        void cr() {
+            CR();
+        }
+        
        
 };

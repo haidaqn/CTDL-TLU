@@ -15,7 +15,10 @@ int main()
     dd.AddToParent("Hai Ba Trung", "Ha Noi");
     dd.AddToParent("Bach Mai", "Hai Ba Trung");
     dd.AddToParent("Pho Hue", "Hai Ba Trung");
-    List<string> r = dd.GetChildren("Ha Noi");
-    r.PrintAll();
+    // dd.Delete("Hai Ba Trung");
+    // dd.Get("Ha Noi");
+    dd.Get("Bach Mai");
+    dd.Get("Hai Ba Trung");
+    // dd.printall();
     cout << endl;
 }
