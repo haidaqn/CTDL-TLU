@@ -1,9 +1,8 @@
 #ifndef tree_h
 #define tree_h
 #include "list.h"
-#include "treenode.h"
+#include "NodeTree.h"
 
-int bac = 0;
 template <class T> class Tree {
 private:
   TreeNode<T> *root;
@@ -50,8 +49,8 @@ private:
       {
         if (p->key == val)
           return r;
-        p = p->pNext;
         TreeNode<T> *r1 = GetTreeNodeParent(val, p);
+        p = p->pNext;
         if (r1 != 0)
           return r1;
       }
@@ -66,7 +65,6 @@ public:
       root->key = value;
       root->pChild = NULL;
       root->pNext = NULL;
-      bac++;
     } else {
       root->key = value;
     }
@@ -80,7 +78,6 @@ public:
       n->pNext = NULL;
       if (p->pChild == NULL) {
         p->pChild = n;
-        bac++;
       } else {
         TreeNode<T> *c = p->pChild;
         while (c->pNext != NULL)
@@ -101,7 +98,6 @@ public:
     }
     return r;
   }
-  int GetBac() { return bac; }
   void PreOrder() { PreOrder(root); }
   void InOrder() { InOrder(root); }
   void PostOrder() { PostOrder(root); }

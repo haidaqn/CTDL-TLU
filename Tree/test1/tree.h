@@ -24,7 +24,7 @@ private:
         if(r->key > val)
             AddToVal(r->pLeft, val);
     }
-    bool Search(Node<T> *r, T val) {
+    bool Search(Node<T> *&r, T val) {
         if(r->key == val)
             return true;
         if(r->key > val)
@@ -61,7 +61,7 @@ public:
         AddToVal(root,val);
     }
     void search(T val) {
-        cout << Search(val) << endl;
+        cout << Search(root, val) << endl;
     }
     void PrintTree() {
         Print(root);

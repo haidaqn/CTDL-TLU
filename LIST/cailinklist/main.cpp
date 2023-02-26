@@ -15,8 +15,9 @@ int main() {
         l.Add(i);
     }
 
-    
-    cout<<l.count();
+    l.Insert(3, 100);
+
+    l.printAll();
 
     cout<<endl;
 

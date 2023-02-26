@@ -30,7 +30,6 @@ class BST{
             if(r->data==value) return true;
             if(value < r->data)
                 return SearchFromRoot(r->pLeft,value);
-            
             else
                 return SearchFromRoot(r->pRight,value);
         }
@@ -51,11 +50,7 @@ class BST{
             }
             return 0;
         }
-        void CR() {
-            Queue<BSTNode<T>*> q1;
-            q1.EnQueue(root);
-            cout<<q1.GetFirst();
-        }
+        
     public:
         BST(){
             root=0;

@@ -2,18 +2,18 @@
 #include "tree.h"
 using namespace std;
 
-int main()
-{
+int main() {
 
     Tree<int> l;
+
+    l.add(10);
     l.add(7);
-    l.add(9);
-    l.add(3);
-    l.add(5);
-    l.add(14);
+    l.add(11);
+    l.add(8);
     l.add(15);
-    l.Print();
-    cout << endl;
-    l.h();
+    l.add(3);
+
+    // l.PreOrDer();
+    l.chieucao();
     return 0;
 }

@@ -11,9 +11,9 @@ int main() {
     l.add(3);
     l.add(5);
     l.add(14);
+    l.search(14);
     // l.add(15);
     l.PrintTree();
     cout << endl;
-    l.h();
     return 0;
 }

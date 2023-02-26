@@ -17,8 +17,8 @@ int main()
     dd.AddToParent("Pho Hue", "Hai Ba Trung");
     // dd.Delete("Hai Ba Trung");
     // dd.Get("Ha Noi");
-    dd.Get("Bach Mai");
-    dd.Get("Hai Ba Trung");
-    // dd.printall();
+
+    dd.PostOrder();
+
     cout << endl;
 }
