@@ -11,7 +11,6 @@ int main(){
     ds.Add(5);
     ds.Add(14);
     // ds.Print();
-    cout << endl;
-    ds.cr();
+    cout<<ds.Search(9);
     // ds.chieucao();
 }

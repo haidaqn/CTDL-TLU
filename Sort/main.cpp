@@ -75,7 +75,6 @@ void MergeSort(int a[], int s, int f)
 }
 void QuickSort(int a[], int left, int right)
 {
-   
     int x = a[(left + right) / 2];
     int i = left;
     int j = right;

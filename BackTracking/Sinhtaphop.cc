@@ -10,13 +10,13 @@ void print(int n, char x[]){
 
 void Sinh(char a[], char x[],int n, int k, int z) {
     for (int i = 0; i < n;i++) {
-            x[z] = a[i];
-            if(z == k) {
-                print(k, x);
-            }
-            else {
-                Sinh(a, x, n, k, z + 1);
-            }
+        x[z] = a[i];
+        if(z == k) {
+            print(k, x);
+        }
+        else {
+            Sinh(a, x, n, k, z + 1);
+        }
     }
 }
 

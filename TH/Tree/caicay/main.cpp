@@ -15,8 +15,10 @@ int main()
     dd.AddToParent("Hai Ba Trung", "Ha Noi");
     dd.AddToParent("Bach Mai", "Hai Ba Trung");
     dd.AddToParent("Pho Hue", "Hai Ba Trung");
-    // dd.Delete("Hai Ba Trung");
+    dd.Delete("Hai Ba Trung");
     // dd.Get("Ha Noi");
+
+    // dd.Delete("Viet Nam");
 
     dd.PostOrder();
 

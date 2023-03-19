@@ -67,9 +67,7 @@ class BST{
         void chieucao() {
             cout << height(root) << endl;
         }
-        void cr() {
-            CR();
-        }
+        
         
        
 };
