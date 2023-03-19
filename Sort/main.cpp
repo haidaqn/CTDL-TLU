@@ -92,7 +92,6 @@ void QuickSort(int a[], int left, int right)
             j--;
         }
     } while (i < j);
-    
     if (left < j)
         QuickSort(a, left, j);
     if (right > i)
